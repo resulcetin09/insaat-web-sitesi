@@ -148,8 +148,97 @@
 			<div class="content-area">
 				<!-- Portfolio -->
 				<div class="container">
-					<div class="row m-lr0">
-						<div class="col-lg-12 bg-white p-a20 m-b20">
+					<!-- Filter Buttons -->
+					<!-- Premium Filter Buttons -->
+					<style>
+						ul.premium-filters {
+							padding: 0;
+							margin: 0 0 50px 0;
+							list-style: none;
+							display: flex;
+							justify-content: center;
+							gap: 25px;
+							flex-wrap: wrap;
+						}
+
+						ul.premium-filters li {
+							display: inline-block;
+							position: relative;
+						}
+
+						ul.premium-filters li a {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							padding: 16px 45px;
+							font-size: 15px;
+							font-weight: 700;
+							text-transform: uppercase;
+							letter-spacing: 1.5px;
+							color: #2c3e50;
+							background: #ffffff;
+							border-radius: 5px;
+							cursor: pointer;
+							transition: all 0.3s ease;
+							box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+							/* Soft shadow for depth */
+							border-bottom: 3px solid transparent;
+							min-width: 250px;
+						}
+
+						/* Hover State */
+						ul.premium-filters li a:hover {
+							transform: translateY(-3px);
+							box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+							color: #8f1c21;
+							/* Primary Theme Color */
+						}
+
+						/* Active State for Ongoing */
+						ul.premium-filters li.active[data-filter="cat-ongoing"] a {
+							background: #FDC716;
+							/* Web Site Secondary Color (Yellow/Gold) */
+							color: #fff;
+							box-shadow: 0 10px 25px rgba(253, 199, 22, 0.4);
+							border-bottom: 3px solid #dcb013;
+						}
+
+						/* Active State for Completed */
+						ul.premium-filters li.active[data-filter="cat-completed"] a {
+							background: #8f1c21;
+							/* Web Site Primary Color (Red) */
+							color: #fff;
+							box-shadow: 0 10px 25px rgba(143, 28, 33, 0.4);
+							border-bottom: 3px solid #7a1519;
+						}
+
+						/* Icons styling if needed */
+						ul.premium-filters li a i {
+							margin-right: 10px;
+							font-size: 18px;
+						}
+					</style>
+
+					<div class="site-filters clearfix center m-b40">
+						<ul class="filters premium-filters" data-toggle="buttons">
+							<li data-filter="cat-ongoing" class="btn active">
+								<a href="javascript:void(0);">
+									<i class="fa fa-wrench"></i> Devam Eden Projeler
+								</a>
+							</li>
+							<li data-filter="cat-completed" class="btn">
+								<a href="javascript:void(0);">
+									<i class="fa fa-check-circle"></i> Biten Projeler
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Premium Filter Buttons END -->
+					<!-- Filter Buttons END -->
+
+					<div class="row m-lr0" id="masonry">
+
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-ongoing">
 							<div class="blog-post blog-md date-style-2">
 								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
 											src="images/projects/image.png" alt="PAŞAKÖY MAHALLESİ"></a> </div>
@@ -171,7 +260,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-12 bg-white p-a20 m-b20">
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-ongoing">
 							<div class="blog-post blog-md date-style-2">
 								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
 											src="images/projects/image2.png" alt="KILIÇARSLAN MAHALLESİ"></a> </div>
@@ -193,7 +282,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-12 bg-white p-a20 m-b20">
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-ongoing">
 							<div class="blog-post blog-md date-style-2">
 								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
 											src="images/projects/image3.png" alt="PAŞAKÖY"></a> </div>
@@ -211,7 +300,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-12 bg-white p-a20 m-b20">
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-completed">
 							<div class="blog-post blog-md date-style-2">
 								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
 											src="https://images.unsplash.com/photo-1590644004126-f4d04ac048b6?q=80&w=700&h=438&fit=crop"
@@ -228,6 +317,159 @@
 									<div class="dez-post-tags">
 										<div class="post-tags"> <a href="#">İnşaat </a> <a href="#">Eğitim </a> <a
 												href="#">Finans </a> <a href="#">Restoran </a> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-completed">
+							<div class="blog-post blog-md date-style-2">
+								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
+											src="images/logo.png" alt="MAHİR ULUTÜRK APARTMANI"></a> </div>
+								<div class="dez-post-info">
+									<div class="dez-post-title ">
+										<h3 class="post-title"><a href="#">MAHİR ULUTÜRK APARTMANI</a></h3>
+									</div>
+									<div class="dez-post-text">
+										<p><strong>KILIÇARSLAN MAHALLESİ</strong><br>
+											A ve B Blok Toplam 18 Daire (9+9)</p>
+									</div>
+									<div class="dez-post-tags">
+										<div class="post-tags"> <a href="#">Konut </a> <a href="#">Biten Projeler </a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-completed">
+							<div class="blog-post blog-md date-style-2">
+								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
+											src="images/logo.png" alt="KALYONCUOĞLU SİTESİ"></a> </div>
+								<div class="dez-post-info">
+									<div class="dez-post-title ">
+										<h3 class="post-title"><a href="#">KALYONCUOĞLU SİTESİ</a></h3>
+									</div>
+									<div class="dez-post-text">
+										<p><strong>SAĞLIK MAHALLESİ</strong><br>
+											A, B, C Blok Toplam 40 Daire (12+16+12)</p>
+									</div>
+									<div class="dez-post-tags">
+										<div class="post-tags"> <a href="#">Konut </a> <a href="#">Biten Projeler </a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-completed">
+							<div class="blog-post blog-md date-style-2">
+								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
+											src="images/logo.png" alt="GARDENYA APARTMANI"></a> </div>
+								<div class="dez-post-info">
+									<div class="dez-post-title ">
+										<h3 class="post-title"><a href="#">GARDENYA APARTMANI</a></h3>
+									</div>
+									<div class="dez-post-text">
+										<p><strong>TEPECİK MAHALLESİ</strong><br>
+											12 Daire</p>
+									</div>
+									<div class="dez-post-tags">
+										<div class="post-tags"> <a href="#">Konut </a> <a href="#">Biten Projeler </a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-completed">
+							<div class="blog-post blog-md date-style-2">
+								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
+											src="images/logo.png" alt="ATALAR APARTMANI"></a> </div>
+								<div class="dez-post-info">
+									<div class="dez-post-title ">
+										<h3 class="post-title"><a href="#">ATALAR APARTMANI</a></h3>
+									</div>
+									<div class="dez-post-text">
+										<p><strong>BORAZANLAR MAHALLESİ</strong><br>
+											20 Daire</p>
+									</div>
+									<div class="dez-post-tags">
+										<div class="post-tags"> <a href="#">Konut </a> <a href="#">Biten Projeler </a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-completed">
+							<div class="blog-post blog-md date-style-2">
+								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
+											src="images/logo.png" alt="KEMAL YÜCEL SİTESİ"></a> </div>
+								<div class="dez-post-info">
+									<div class="dez-post-title ">
+										<h3 class="post-title"><a href="#">KEMAL YÜCEL SİTESİ</a></h3>
+									</div>
+									<div class="dez-post-text">
+										<p><strong>ALPAGUT MAHALLESİ</strong><br>
+											A ve B Blok Toplam 18 Daire (9+9)</p>
+									</div>
+									<div class="dez-post-tags">
+										<div class="post-tags"> <a href="#">Konut </a> <a href="#">Biten Projeler </a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-completed">
+							<div class="blog-post blog-md date-style-2">
+								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
+											src="images/logo.png" alt="GETINCITY"></a> </div>
+								<div class="dez-post-info">
+									<div class="dez-post-title ">
+										<h3 class="post-title"><a href="#">GETINCITY</a></h3>
+									</div>
+									<div class="dez-post-text">
+										<p><strong>ALPAGUT MAHALLESİ</strong><br>
+											12 Daire</p>
+									</div>
+									<div class="dez-post-tags">
+										<div class="post-tags"> <a href="#">Konut </a> <a href="#">Biten Projeler </a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-ongoing">
+							<div class="blog-post blog-md date-style-2">
+								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
+											src="images/logo.png" alt="BAHÇELİEVLER PROJESİ"></a> </div>
+								<div class="dez-post-info">
+									<div class="dez-post-title ">
+										<h3 class="post-title"><a href="#">BAHÇELİEVLER PROJESİ</a></h3>
+									</div>
+									<div class="dez-post-text">
+										<p><strong>DEVAM EDEN PROJE</strong><br>
+											1+1 44 Daire ve Dükkan</p>
+									</div>
+									<div class="dez-post-tags">
+										<div class="post-tags"> <a href="#">Konut </a> <a href="#">Ticari </a> <a
+												href="#">Devam Eden </a> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 bg-white p-a20 m-b20 project-item cat-ongoing">
+							<div class="blog-post blog-md date-style-2">
+								<div class="dez-post-media dez-img-effect zoom-slow"> <a href="#"><img
+											src="images/logo.png" alt="SÜMER MAHALLESİ PROJESİ"></a> </div>
+								<div class="dez-post-info">
+									<div class="dez-post-title ">
+										<h3 class="post-title"><a href="#">SÜMER MAHALLESİ PROJESİ</a></h3>
+									</div>
+									<div class="dez-post-text">
+										<p><strong>DEVAM EDEN PROJE</strong><br>
+											2+0 8 Daire</p>
+									</div>
+									<div class="dez-post-tags">
+										<div class="post-tags"> <a href="#">Konut </a> <a href="#">Devam Eden </a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -331,7 +573,30 @@
 	<script src="js/dz.carousel.min.js"></script><!-- SORTCODE FUCTIONS  -->
 
 	<script src="js/dz.ajax.js"></script><!-- CONTACT JS  -->
+
+	<script>
+		$(document).ready(function () {
+			// Initial filter: Show only ongoing projects
+			$('.project-item').hide();
+			$('.project-item.cat-ongoing').show();
+
+			$('.filters li').on('click', function () {
+				$('.filters li').removeClass('active');
+				$(this).addClass('active');
+
+				var filterValue = $(this).attr('data-filter');
+
+				if (filterValue == 'all') {
+					$('.project-item').show();
+				} else {
+					$('.project-item').hide();
+					$('.project-item.' + filterValue).fadeIn();
+				}
+			});
+		});
+	</script>
 	<div id="loading-area"></div>
+
 
 </body>
 
