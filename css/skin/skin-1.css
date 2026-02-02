@@ -218,3 +218,10 @@ a.bg-primary:hover {
         color: #8f1c21 !important;
     }
 }
+
+/* Desktop Navigation Fix (White for dark header) */
+@media only screen and (min-width: 992px) {
+    .header-style-3.dark .header-nav .nav > li > a {
+        color: #ffffff !important;
+    }
+}
