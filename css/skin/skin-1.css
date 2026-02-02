@@ -209,3 +209,12 @@ a.bg-primary:focus,
 a.bg-primary:hover {
 	background-color: #7a151b !important;
 }
+/* Mobile Navigation Fix */
+@media only screen and (max-width: 991px) {
+    .header-nav .nav > li > a {
+        color: #333333 !important;
+    }
+    .header-nav .nav > li.active > a {
+        color: #8f1c21 !important;
+    }
+}
