@@ -27,7 +27,7 @@
 .footer-line:after,
 .testimonial-1 .quote-left:before,
 .testimonial-2 .quote-left:before,
-.site-filters .site-button.active,
+.site-filters .active>[class*="site-button"],
 .list-num-count>li:before,
 .date-style-4 .post-date strong,
 .date-style-3 .post-date,
@@ -76,7 +76,7 @@
 .comments-area .comment-form p input[type="submit"]:active,
 .widget_calendar table tbody td#today:hover,
 .searchform input[type="submit"]:hover {
-	background-color: #7a151b;
+	background-color: #701519;
 }
 
 /* Rgba color */
@@ -192,7 +192,7 @@ blockquote,
 
 /*===================== 	New Important =====================*/
 a.text-primary:hover {
-	color: #7a151b !important;
+	color: #701519 !important;
 }
 
 .text-primary,
@@ -207,21 +207,12 @@ footer .widget_services ul li a:hover {
 
 a.bg-primary:focus,
 a.bg-primary:hover {
-	background-color: #7a151b !important;
-}
-/* Mobile Navigation Fix */
-@media only screen and (max-width: 991px) {
-    .header-nav .nav > li > a {
-        color: #333333 !important;
-    }
-    .header-nav .nav > li.active > a {
-        color: #8f1c21 !important;
-    }
+	background-color: #701519 !important;
 }
 
-/* Desktop Navigation Fix (White for dark header) */
-@media only screen and (min-width: 992px) {
-    .header-style-3.dark .header-nav .nav > li > a {
-        color: #ffffff !important;
-    }
+/* Mobile Header Visibility Fix */
+@media only screen and (max-width: 991px) {
+	.header-style-3 .header-nav .nav>li>a {
+		color: #333 !important;
+	}
 }
